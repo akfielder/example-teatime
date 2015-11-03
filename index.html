@@ -1,0 +1,184 @@
+<!-- we add a doctype at the begining of our page to let older browsers know we are using HTML 5 -->
+<!doctype html>
+<html>
+<head>
+  <!-- SEO -->
+  <title>TeaTime</title>
+  <meta name="description" content="An iPhone app for ordering tea">
+  <!-- Symbols and characters -->
+  <meta charset="utf-8">
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/lanes.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <!-- Div tags are used when no other tag has a semantic meaning - ie when no other tag makes sense. Used in collaboration with a class to give meaning -->
+    <!-- We'll be floating our elements so we add in a clearfix class that exists in our reset.css already. to add a second class to a element, we write the first class then the second seperated by a space. -->
+    <div class="container group">
+      <h1>
+        <a href="index.html">
+          <img src="images/logo.png" alt="TeaTime logo">
+        </a>
+      </h1>
+
+      <nav>
+      <a href="about.html">About</a>
+      <a href="blog.html" class="blog">Blog</a>
+      <a href="http://www.twitter.com/teatime">Twitter</a>
+    </nav>
+
+
+    <!-- <div class="click-nav">
+      <ul class="blog">
+        <li>
+          <a href="#" class="clicker">Menu</a>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="http://www.twitter.com/teatime">Twitter</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="click-nav">
+      <ul class="blog">
+        <li>
+          <a href="#" class="clicker">Menu</a>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="http://www.twitter.com/teatime">Twitter</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div> -->
+
+  </div>
+
+</header>
+
+<!-- As we can see that each section has a different background, we know that we need to uniquely identify each one by giving them classes. -->
+<section class="intro">
+  <div class="container group">
+
+    <div class="text">
+      <!-- br tags force text onto a new line -->
+      <h2>Your Brew. <br> Better.</h2>
+      <p>Get 1000s and 1000s of tea <br> brands delivered direct to your door.</p>
+
+      <a href="appstore.html">
+        <img src="images/appstore.png" alt="Available on the App Store">
+      </a>
+
+    </div>
+
+    <div class="iphone">
+      <img src="images/iphone.png">
+    </div>
+
+  </div>
+</section>
+
+<section class="about">
+  <div class="container group">
+    <!-- here we are using lanes.css, a grid system framework. This gives us 12 columns to work with. Here we want a four columns layout, so we divide 12 by 4 and apply our classes 'three columns' to each div as it occupies 3 columns -->
+    <div class="three columns">
+      <img src="images/search.png">
+      <h3>Search</h3>
+      <p>Find 1000s of brews and blends.</p>
+    </div>
+
+    <div class="three columns">
+      <img src="images/share.png">
+      <h3>Share</h3>
+      <p>Share your favourite teas with friends.</p>
+    </div>
+
+    <div class="three columns">
+      <img src="images/shop.png">
+      <h3>Shop</h3>
+      <p>Buy securely and get free delivery.</p>
+    </div>
+
+    <div class="three columns">
+      <img src="images/sup.png">
+      <h3>Sup</h3>
+      <p>Sit back and enjoy a nice cup of tea!</p>
+    </div>
+  </div>
+</section>
+
+<section class="quotes">
+  <div class="container group">
+
+    <div class="four columns">
+      <div class="quote-tile">
+        <blockquote>"TeaTime is 100% indispensable - I now use it to order all my tea."</blockquote>
+        <p>Peter Olson</p>
+        <img src="images/peter.jpg">
+      </div>
+    </div>
+
+    <div class="four columns">
+      <div class="quote-tile">
+        <blockquote>"After a long day's work, I love to relax. TeaTime is perfect."</blockquote>
+        <p>Susan Clark</p>
+        <img src="images/susan.jpg">
+      </div>
+    </div>
+
+    <div class="four columns">
+      <div class="quote-tile">
+        <blockquote>"I love ordering tea with TeaTime, it's the best app out there."</blockquote>
+        <p>Henry Larson</p>
+        <img src="images/henry.jpg">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container group">
+
+    <h3>Get in Touch</h3>
+    <p>
+      <a href="mailto:contact@teatimeapp.com">Email Us</a> or call Jamie on <a href="tel:+447775409587">+44 7775 409 587</a>
+    </p>
+
+    <!-- Each time we add inputs, use a form tag to surround them. -->
+    <form>
+      <!-- Input tags allo us to create text fields for our form. Make sure you use the correct type, ie. email, password etc for your field. We also add a name attribute, to give context to the data inputted when sent to a database. Add a placeholder if you want greyed out text to appear in the field. Input fields are only used for text that fits on one line. -->
+      <input type="email" name="emailaddress" placeholder="email@address.com">
+
+      <!-- Use text areas for multi-line entries -->
+      <textarea name="message" placeholder="How can we help?"></textarea>
+
+      <!-- Input elements can be bottons too. -->
+      <input type="submit" value="Send">
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container group">
+    <a href="http://instagram.com/teatimeapp"><img src="images/instagram.png"></a>
+    <a href="http://facebook.com/teatimeapp"><img src="images/facebook.png"></a>
+    <a href="http://twitter.com/teatimeapp"><img src="images/twitter.png"></a>
+
+    <small>Copyright TeaTime Systems Ltd, 2014</small>
+  </div>
+</footer>
+
+<script src="JS/jquery.js"></script>
+<script src="JS/teatime.js"></script>
+
+</body>
+
+</html>
