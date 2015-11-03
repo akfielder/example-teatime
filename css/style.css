@@ -1,0 +1,248 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300);
+
+body {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #777;
+  font-weight: 300;
+}
+
+header {
+  background: #fff;
+  /*Box-shadow allows us to add shadow to elements. It takes 6 values, horizontal shadow, vertical shadow, blur radius, spread and then we add a colour. Usually we need a transparent colour when adding shadows, so we use an rgba colour which stands for red green blue alpha. Alpha takes care of transparency, with 0 being completely transparent, and 1 being opaque.*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+  /*Fixed header*/
+  /*Position fixed fixes elements to the browser window. Use top, right, bottom and left properties to move the element around.*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*When we apply position fixed, the header reduces it size to that of its content. To fix this add 100% width.*/
+  width: 100%;
+  /*the elements on our page have an order. They are displayed in a view heiarchy. We want our fixed header to appear at the front, so we apply a positive z-index*/
+  z-index: 10;
+}
+
+h1 {
+  float: left;
+  /*In order to get our image to sit in the middle of our header, we need to use line-height. Setting the line-height to 75px allows us to move the image to the middle. Images and text by default sit at the bottom of the line.*/
+  line-height: 75px;
+}
+
+h1 img {
+  /*use vertical align alongside line height to put our image vertically in the middle. This won't work if you just set a height - it's directly linked to line-height*/
+  vertical-align: middle;
+}
+
+nav {
+  float: right;
+  line-height: 75px;
+}
+
+nav a {
+  color: #777;
+  text-decoration: none;
+  padding: 0 15px;
+  /*Inline elements do not allow us to set a height, they are as high as their content. Block-level elements allow us to set height. Here we change our anchor tags to be a hybrid of inline & block. They sit on the same line, but now take notice of the line-height*/
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/*drop down menu styles*/
+/*.click-nav {margin:100px auto;width:200px;}
+.click-nav ul {position:relative;font-weight:900;}
+.click-nav ul li {position:relative;list-style:none;cursor:pointer;}
+.click-nav ul li ul {position:absolute;left:0;right:0;}
+.click-nav ul .clicker {position:relative;background:#2284B5;color:#FFF;}
+.click-nav ul .clicker:hover,.click-nav ul .active {background:#196F9A;}
+.click-nav img {position:absolute;top:9px;left:12px;}
+.click-nav ul li a {transition:background-color 0.2s ease-in-out;-webkit-transition:background-color 0.2s ease-in-out;
+-moz-transition:background-color 0.2s ease-in-out;display:block;padding:8px 10px 8px 40px;background:#FFF;color:#333;text-decoration:none;}
+.click-nav ul li a:hover {background:#F2F2F2;}*/
+
+/* Fallbacks */
+/*.click-nav .no-js ul {display:none;}
+.click-nav .no-js:hover ul {display:block;}*/
+
+.intro {
+  height: 570px;
+  background: url(../images/blur-bg.jpg) center no-repeat;
+  background-size: cover;
+  /*Overflow hidden hides any images or content that break out of the element*/
+  overflow: hidden;
+  /*As we have a fixed header we loose 75px as its now removed from the flow of our page, so we add a margin on the section below to make up for it.*/
+  margin-top: 75px;
+}
+
+.iphone {
+  float: left;
+  width: 50%;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.text {
+  float: right;
+  width: 50%;
+  padding: 100px 0 0 70px;
+}
+
+h2 {
+  font-size: 60px;
+  line-height: 1;
+}
+
+.text p {
+  font-size: 22px;
+  margin: 50px 0;
+}
+
+.columns {
+  margin: 70px 0;
+  text-align: center;
+}
+
+h3 {
+  font-size: 35px;
+  margin: 30px 0 5px 0;
+}
+
+.columns p {
+  padding: 0 30px;
+}
+
+.quotes {
+  background-color: #e9e9e9;
+}
+
+.quote-tile {
+  background-color: #fff;
+  margin: 0 15px;
+  padding: 65px 23px;
+  /*When adding a border, use the following values, style, thickness, colour*/
+  border: solid 1px #e1e1e1;
+  /*To round border edges*/
+  border-radius: 4px;
+}
+
+blockquote {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.quotes img {
+  margin-top: 10px;
+  width: 90px;
+  border-radius: 45px;
+}
+
+.contact {
+  background: url(../images/map.jpg) center no-repeat;
+  background-size: cover;
+  padding: 70px 0;
+  text-align: center;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #444;
+  /*To make nicer underline styles, use a small amount of padding and a border-bottom*/
+  padding-bottom: 1px;
+  border-bottom: solid 2px #444;
+}
+
+form {
+  width: 80%;
+  margin: 20px auto 0 auto;
+}
+
+input, textarea {
+  border: none;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+textarea {
+  /*To stop our text area from resizing horizontally, we set the resize property to vertical*/
+  resize: vertical;
+  height: 150px;
+}
+
+/*To target our submit buttom specifically*/
+input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  float: right;
+  width: 80px;
+  /*When we change our button styles, it removes the cursor. To add this back in, change the cursor property to pointer*/
+  cursor: pointer;
+}
+
+/*Remove blue glowing outline*/
+input:focus, textarea:focus {
+  outline: 0;
+}
+
+footer {
+  padding: 40px 0;
+  text-align: center;
+}
+
+footer a {
+/*Underlines removed from the anchor tags inside of the footer*/
+  text-decoration: none;
+  /*more space between the anchor tags*/
+  margin: 0 5px;
+  padding: 2px;
+}
+
+small {
+  /*The copyright text on the line below*/
+  display: block;
+  /*push copyright text away from anchor tags by 10px*/
+  margin-top: 10px;
+}
+
+
+@media screen and (max-width: 800px) {
+  /*remove the floats from our header and our intro section so that everything stacks. Also reset the widths to 100%*/
+h1, nav, .iphone, .text {
+  float: none;
+  width: 100%;
+}
+
+  /*Turn off the fixed header. Set back to position static. Turn off box-shadow, centrally align everything*/
+header {
+  position: static;
+  box-shadow: none;
+  text-align: center;
+}
+
+  /*make the anchor tags inside the nav stack*/
+nav a {
+  display: block;
+}
+
+.intro {
+  /*get rid of the 75px margin we added to cater for our fixed header*/
+  margin: 0;
+  /*auto adjust heigh according to contect. makes the section large enough to show everything*/
+  height: auto;
+  text-align: center;
+}
+
+.text {
+  /*get rid of left padding and reduce top padding to allow central positioning on page*/
+  padding: 30px 0 0 0;
+}
+
+.columns {
+  margin: 20px 0;
+}
